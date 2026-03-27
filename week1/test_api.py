@@ -1,6 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-API_KEY = "sk-3843242ce0ae436e88185306e1fe1496"
+# 加载 .env 文件
+load_dotenv()
+
+# 从环境变量读取 API Key
+API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
 url = "https://api.deepseek.com/v1/chat/completions"
 
